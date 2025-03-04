@@ -1,4 +1,3 @@
-// Import the framework and instantiate it
 import Fastify from 'fastify'
 import authRoutes from './auth.js';
 const fastify = Fastify({
@@ -7,7 +6,7 @@ const fastify = Fastify({
 // Register auth routes
 fastify.register(authRoutes, { prefix: '/auth' });
 
-// Declare a route
+// Entry endpoint
 fastify.get('/', async function handler (request, reply) {
   return { hello: 'world' }
 })
